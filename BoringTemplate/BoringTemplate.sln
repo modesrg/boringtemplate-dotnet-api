@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoringTemplate.API", "BoringTemplate.API\BoringTemplate.API.csproj", "{C0862A29-F09C-49B2-B581-7F48E4EBDE80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoringTemplate.Tests", "BoringTemplate.Tests\BoringTemplate.Tests.csproj", "{E493B114-869F-45D1-9BF8-A0C2C6402479}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0862A29-F09C-49B2-B581-7F48E4EBDE80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0862A29-F09C-49B2-B581-7F48E4EBDE80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0862A29-F09C-49B2-B581-7F48E4EBDE80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0862A29-F09C-49B2-B581-7F48E4EBDE80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E493B114-869F-45D1-9BF8-A0C2C6402479}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E493B114-869F-45D1-9BF8-A0C2C6402479}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E493B114-869F-45D1-9BF8-A0C2C6402479}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E493B114-869F-45D1-9BF8-A0C2C6402479}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E6CD4A87-2E8B-48F1-A124-15C17A066B5F}
+	EndGlobalSection
+EndGlobal
