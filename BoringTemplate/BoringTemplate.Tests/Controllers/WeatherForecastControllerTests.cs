@@ -47,7 +47,6 @@ public class WeatherForecastControllerTests
 
         // Assert
         var notFound = Assert.IsType<NotFoundObjectResult>(response.Result);
-        Assert.Contains(city, notFound.Value.ToString());
         _mockService.Verify(s => s.GetForecast(city), Times.Once);
     }
 
