@@ -3,8 +3,8 @@ using Microsoft.EntityFrameworkCore;
 
 public class AppDbContext : DbContext
 {
-    public DbSet<LocationForecastEntity> WeatherForecasts { get; set; }
-    public DbSet<DailyWeatherEntity> DailyForecasts { get; set; }
+    public DbSet<LocationForecastEntity> LocationForecast { get; set; }
+    public DbSet<DailyWeatherEntity> DailyWeather { get; set; }
 
     public AppDbContext(DbContextOptions<AppDbContext> options)
         : base(options)

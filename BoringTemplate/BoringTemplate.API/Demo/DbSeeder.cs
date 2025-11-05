@@ -16,7 +16,7 @@ public static class DbSeeder
 
     public static async Task SeedIfEmptyAsync(AppDbContext context)
     {
-        if (await context.WeatherForecasts.AnyAsync())
+        if (await context.LocationForecast.AnyAsync())
             return;
 
         var forecasts = Cities.Select(city => new LocationForecastEntity
@@ -26,14 +26,13 @@ public static class DbSeeder
             DailyForecast = Enumerable.Range(1, 5).Select(index => new DailyWeatherEntity
             {
                 Id = IdGenerator.Generate(),
-                //Id = city.Replace(" ", "").ToLower() + "_" + DateOnly.FromDateTime(DateTime.Now.AddDays(index)).ToString("yyyyMMdd"),
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
                 TemperatureC = Random.Shared.Next(-20, 55),
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             }).ToList()
         }).ToList();
 
-        await context.WeatherForecasts.AddRangeAsync(forecasts);
+        await context.LocationForecast.AddRangeAsync(forecasts);
         await context.SaveChangesAsync();
     }
 }

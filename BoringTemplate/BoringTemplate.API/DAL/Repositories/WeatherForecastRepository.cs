@@ -8,13 +8,13 @@ public class WeatherForecastRepository(AppDbContext dbContext) : IWeatherForecas
 {
     public async Task<LocationForecastEntity?> GetForecast(string city)
     {
-        return await dbContext.WeatherForecasts
+        return await dbContext.LocationForecast
             .Include(f => f.DailyForecast).FirstOrDefaultAsync(wf => wf.City.ToUpper() == city.ToUpper());
     }
 
     public async Task<string> CreateForecast(LocationForecastEntity forecastEntity)
     {
-        var createdForecast = await dbContext.WeatherForecasts.AddAsync(forecastEntity);
+        var createdForecast = await dbContext.LocationForecast.AddAsync(forecastEntity);
         await dbContext.SaveChangesAsync();
         return forecastEntity.Id;
     }
