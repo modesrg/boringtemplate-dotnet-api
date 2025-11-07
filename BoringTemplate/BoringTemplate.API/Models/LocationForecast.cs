@@ -1,6 +1,6 @@
 namespace BoringTemplate.API.Models;
 
-public class LocationForecast
+public record LocationForecast
 {
     public string? Id { get; set; }
 

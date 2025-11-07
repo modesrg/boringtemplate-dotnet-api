@@ -1,6 +1,6 @@
 namespace BoringTemplate.API.Models;
 
-public class DailyWeather
+public record DailyWeather
 {
     public string? Id { get; set; }
     public DateOnly Date { get; set; }
